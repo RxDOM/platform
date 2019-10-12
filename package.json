@@ -1,7 +1,18 @@
 {
-  "name": "platform",
-  "version": "0.0.0",
+  "name": "@rxdom/platform",
+  "version": "1.0.0",
+  "description": "monorepo for nxdom development",
+  "keywords": [
+    "rxjs",
+    "dom",
+    "web"
+  ],
+  "author": "Justin Schwartzenberger <jschwarty@users.noreply.github.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RxDOM/platform.git"
+  },
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
@@ -25,15 +36,39 @@
     "help": "nx help"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "rxjs": "6.5.3"
+  },
   "devDependencies": {
+    "@nrwl/eslint-plugin-nx": "8.6.0",
+    "@nrwl/jest": "8.6.0",
+    "@nrwl/linter": "8.6.0",
     "@nrwl/workspace": "8.6.0",
-    "@types/node": "~8.9.4",
+    "@types/jest": "24.0.9",
+    "@types/node": "8.9.4",
+    "@typescript-eslint/eslint-plugin": "2.0.0-alpha.4",
+    "@typescript-eslint/parser": "2.0.0-alpha.4",
     "dotenv": "6.2.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
     "eslint": "6.1.0",
-    "typescript": "~3.4.5",
-    "prettier": "1.18.2"
+    "eslint-config-prettier": "6.0.0",
+    "husky": "3.0.8",
+    "jest": "24.1.0",
+    "lint-staged": "9.4.2",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.0",
+    "ts-node": "7.0.0",
+    "tslint": "5.11.0",
+    "typescript": "3.4.5"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

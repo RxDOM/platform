@@ -1,5 +1,5 @@
 {
-  "npmScope": "platform",
+  "npmScope": "@rxdom",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": "*",
@@ -7,5 +7,9 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "input": {
+      "tags": []
+    }
+  }
 }

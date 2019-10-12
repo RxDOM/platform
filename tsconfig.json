@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rxdom/input": ["libs/input/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
